@@ -1,5 +1,6 @@
-import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:feather_icons/feather_icons.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 import 'pages/home_page.dart';
 import 'pages/explore_page.dart';
@@ -7,61 +8,77 @@ import 'pages/add_page.dart';
 import 'pages/inbox_page.dart';
 import 'pages/shopping_page.dart';
 
-class BottomNavBar extends StatefulWidget {
+class BottomNavBar extends StatelessWidget {
   const BottomNavBar({Key? key}) : super(key: key);
 
   @override
-  State<BottomNavBar> createState() => _BottomNavBarState();
-}
-
-class _BottomNavBarState extends State<BottomNavBar> {
-  int _selectIndex = 0;
-
-  void _navigateBottomBar(int index) {
-    setState(() {
-      _selectIndex = index;
-    });
-  }
-
-  final List<Widget> _pages = [
-    const HomePage(),
-    const ExplorePage(),
-    const AddPage(),
-    const InboxPage(),
-    const ShoppingPage(),
-  ];
-
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _pages[_selectIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        currentIndex: _selectIndex,
-        onTap: _navigateBottomBar,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(FeatherIcons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(FeatherIcons.compass),
-            label: 'Explore',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(FeatherIcons.plus),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(FeatherIcons.mail),
-            label: 'Inbox',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(FeatherIcons.shoppingBag),
-            label: 'Shop',
-          ),
-        ],
+    PersistentTabController _controller;
+    _controller = PersistentTabController(initialIndex: 0);
+
+    List<Widget> _buildScreens() {
+      return [
+        const HomePage(),
+        const ExplorePage(),
+        const AddPage(),
+        const InboxPage(),
+        const ShoppingPage(),
+      ];
+    }
+
+    List<PersistentBottomNavBarItem> _navBarsItems() {
+      return [
+        PersistentBottomNavBarItem(
+          icon: const Icon(FeatherIcons.home),
+          title: ("Home"),
+          activeColorPrimary: Colors.deepOrange,
+          inactiveColorPrimary: Colors.grey,
+        ),
+        PersistentBottomNavBarItem(
+          icon: const Icon(FeatherIcons.compass),
+          title: ("Explore"),
+          activeColorPrimary: Colors.deepOrange,
+          inactiveColorPrimary: Colors.grey,
+        ),
+        PersistentBottomNavBarItem(
+          icon: const Icon(FeatherIcons.plus, color: Colors.white),
+          activeColorPrimary: Colors.black,
+          inactiveColorPrimary: Colors.grey,
+        ),
+        PersistentBottomNavBarItem(
+          icon: const Icon(FeatherIcons.mail),
+          title: ("Inbox"),
+          activeColorPrimary: Colors.deepOrange,
+          inactiveColorPrimary: Colors.grey,
+        ),
+        PersistentBottomNavBarItem(
+          icon: const Icon(FeatherIcons.shoppingBag),
+          title: ("Shop"),
+          activeColorPrimary: Colors.deepOrange,
+          inactiveColorPrimary: Colors.grey,
+        ),
+      ];
+    }
+
+    return PersistentTabView(
+      context,
+      controller: _controller,
+      screens: _buildScreens(),
+      items: _navBarsItems(),
+      confineInSafeArea: true,
+      backgroundColor: Colors.white,
+      handleAndroidBackButtonPress: true,
+      decoration: NavBarDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+        colorBehindNavBar: Colors.white,
       ),
+      popAllScreensOnTapOfSelectedTab: true,
+      popActionScreens: PopActionScreensType.all,
+      itemAnimationProperties: const ItemAnimationProperties(
+        duration: Duration(milliseconds: 200),
+        curve: Curves.ease,
+      ),
+      navBarStyle: NavBarStyle.style15,
     );
   }
 }

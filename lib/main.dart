@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 import 'package:softcent_app/bottom_nav_bar.dart';
-import 'package:softcent_app/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());

@@ -6,9 +6,10 @@ class ExplorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-      body: const Center(
-        child: Text('Explore Page'),
+      body: SafeArea(
+        child: Column(
+          children: [],
+        ),
       ),
     );
   }
