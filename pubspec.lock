@@ -57,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
+  feather_icons:
+    dependency: "direct main"
+    description:
+      name: feather_icons
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -69,11 +76,25 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
+  flutter_staggered_grid_view:
+    dependency: "direct main"
+    description:
+      name: flutter_staggered_grid_view
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.6.1"
   lints:
     dependency: transitive
     description:
@@ -172,3 +193,4 @@ packages:
     version: "2.1.1"
 sdks:
   dart: ">=2.16.2 <3.0.0"
+  flutter: ">=2.0.0"
