@@ -43,7 +43,7 @@ class ImageCard extends StatelessWidget {
                           height: 50,
                           width: 50,
                           child: Image.asset(
-                            'assets/images/A51638.jpg',
+                            'assets/images/saber_ali.png',
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -75,11 +75,12 @@ class ImageCard extends StatelessWidget {
                       ),
                       const Expanded(child: SizedBox()),
                       RawMaterialButton(
+                        elevation: 0,
                         shape: const StadiumBorder(),
                         onPressed: () {
                           print('Follow Clicked');
                         },
-                        fillColor: Colors.deepOrange.shade100,
+                        fillColor: const Color.fromARGB(255, 248, 231, 226),
                         child: Padding(
                           padding:
                               const EdgeInsets.only(left: 10.0, right: 10.0),
@@ -121,10 +122,12 @@ class ImageCard extends StatelessWidget {
                       'View Post',
                       style: TextStyle(
                         color: Colors.black,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
+                      elevation: 0,
                       primary: Colors.grey.shade200,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12.0),

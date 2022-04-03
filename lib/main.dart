@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+
 import 'bottom_nav_bar.dart';
 
 void main() {
