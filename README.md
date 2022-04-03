@@ -58,14 +58,18 @@ lib
 │   ├── models
 │   │   └── explore_page_model.dart
 │   ├── pages
-│   │   ├── add_page.dart
-│   │   ├── explore_page.dart
-│   │   ├── home_page.dart
-│   │   ├── inbox_page.dart
-│   │   └── shop_page.dart
-│   ├── widgets
-│   │   └── image_card.dart
+│   │   ├── add
+│   │   │   └── add_page.dart
+│   │   ├── explore
+│   │   │   ├── widgets
+│   │   │   │   └── image_card.dart
+│   │   │   └── explore_page.dart
+│   │   ├── home
+│   │   │   └── home_page.dart
+│   │   ├── inbox
+│   │   │   └── inbox_page.dart
+│   │   └── shop
+│   │       └── shop_page.dart
 │   └── bottom_nav_bar.dart
-├── .DS_Store
 └── main.dart
 ```

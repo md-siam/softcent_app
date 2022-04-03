@@ -1,0 +1,21 @@
+lib
+├── app
+│   ├── controllers
+│   │   └── explore_page_controller.dart
+│   ├── models
+│   │   └── explore_page_model.dart
+│   ├── pages
+│   │   ├── add
+│   │   │   └── add_page.dart
+│   │   ├── explore
+│   │   │   ├── widgets
+│   │   │   │   └── image_card.dart
+│   │   │   └── explore_page.dart
+│   │   ├── home
+│   │   │   └── home_page.dart
+│   │   ├── inbox
+│   │   │   └── inbox_page.dart
+│   │   └── shop
+│   │       └── shop_page.dart
+│   └── bottom_nav_bar.dart
+└── main.dart
