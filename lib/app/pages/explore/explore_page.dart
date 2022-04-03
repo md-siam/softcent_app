@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 
-import '../controllers/explore_page_controller.dart';
-import '../widgets/image_card.dart';
+import '../../controllers/explore_page_controller.dart';
+import 'widgets/image_card.dart';
+
 
 class ExplorePage extends StatefulWidget {
   const ExplorePage({Key? key}) : super(key: key);
