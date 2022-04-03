@@ -28,7 +28,7 @@ You are free to extend any feature or add anything you want which can highlight 
 </p>
 
 ```
-get: ^4.6.1                          // For state management & binding
+get: ^4.6.1                          // For state management & API binding
 flutter_staggered_grid_view: ^0.4.1  // For staggered grid view
 persistent_bottom_nav_bar: ^4.0.2    // For bottom navigation bar
 feather_icons: ^1.2.0                // For icons
@@ -39,7 +39,7 @@ http: ^0.13.4                        // For http request
 
 <table align="center" style="margin: 0px auto;">
   <tr>
-    <th>ExplorePage with popup</th>
+    <th>ExplorePage with popup dialog</th>
     <th>Search Functionality</th>
   </tr>
   <tr>
