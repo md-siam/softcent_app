@@ -6,8 +6,10 @@ class InboxPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Center(
-        child: Text('Inbox Page'),
+      body: SafeArea(
+        child: Center(
+          child: Text('Inbox Page'),
+        ),
       ),
     );
   }

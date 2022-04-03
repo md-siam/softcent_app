@@ -6,7 +6,7 @@ import 'pages/home_page.dart';
 import 'pages/explore_page.dart';
 import 'pages/add_page.dart';
 import 'pages/inbox_page.dart';
-import 'pages/shopping_page.dart';
+import 'pages/shop_page.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class BottomNavBar extends StatelessWidget {
         const ExplorePage(),
         const AddPage(),
         const InboxPage(),
-        const ShoppingPage(),
+        const ShopPage(),
       ];
     }
 
