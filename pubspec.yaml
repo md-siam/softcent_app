@@ -41,6 +41,8 @@ dependencies:
   persistent_bottom_nav_bar: ^4.0.2
   # For icons
   feather_icons: ^1.2.0
+  # For http request
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:

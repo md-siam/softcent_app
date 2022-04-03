@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:feather_icons/feather_icons.dart';
+import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
-import 'pages/home_page.dart';
-import 'pages/explore_page.dart';
 import 'pages/add_page.dart';
+import 'pages/explore_page.dart';
+import 'pages/home_page.dart';
 import 'pages/inbox_page.dart';
 import 'pages/shop_page.dart';
 

@@ -1,9 +1,15 @@
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
-import 'bottom_nav_bar.dart';
+import 'app/bottom_nav_bar.dart';
 
 void main() {
+  // For disabling landscape view
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+  );
   runApp(const MyApp());
 }
 

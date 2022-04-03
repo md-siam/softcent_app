@@ -1,12 +1,17 @@
 import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 
-import '../models/explore_page_model.dart';
-
 class ImageCard extends StatelessWidget {
-  const ImageCard({Key? key, required this.imageData}) : super(key: key);
+  
+  final String imageUrl;
 
-  final ImageData imageData;
+  const ImageCard({
+    Key? key,
+   
+    required this.imageUrl,
+  }) : super(key: key);
+
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +20,7 @@ class ImageCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20.0),
         child: Image.network(
-          imageData.imageUrl,
+          imageUrl,
           fit: BoxFit.cover,
         ),
       ),
@@ -111,7 +116,7 @@ class ImageCard extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.43,
                       width: MediaQuery.of(context).size.height * 0.43,
                       child: Image.network(
-                        imageData.imageUrl,
+                       imageUrl,
                         fit: BoxFit.cover,
                       ),
                     ),
