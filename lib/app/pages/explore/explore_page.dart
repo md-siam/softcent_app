@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import '../../controllers/explore_page_controller.dart';
 import 'widgets/image_card.dart';
 
-
 class ExplorePage extends StatefulWidget {
   const ExplorePage({Key? key}) : super(key: key);
 
@@ -41,27 +40,29 @@ class _ExplorePageState extends State<ExplorePage> {
             const SizedBox(height: 20.0),
             const Divider(height: 2, color: Colors.grey),
             const SizedBox(height: 10.0),
-            Expanded(child: Obx(() {
-              if (productController.isDataLoading.value) {
-                return const Center(child: CircularProgressIndicator());
-              } else {
-                return StaggeredGridView.countBuilder(
-                  padding: const EdgeInsets.all(10.0),
-                  crossAxisCount: 3,
-                  itemCount: productController.productList!.products!.length,
-                  itemBuilder: (context, index) => ImageCard(
-                    imageUrl: productController
-                        .productList!.products![index].thumbnail!,
-                  ),
-                  staggeredTileBuilder: (index) => StaggeredTile.count(
-                    (index % 7 == 0) ? 2 : 1,
-                    (index % 7 == 0) ? 2 : 1,
-                  ),
-                  mainAxisSpacing: 10.0,
-                  crossAxisSpacing: 10.0,
-                );
-              }
-            })),
+            Expanded(
+              child: Obx(() {
+                if (productController.isDataLoading.value) {
+                  return const Center(child: CircularProgressIndicator());
+                } else {
+                  return StaggeredGridView.countBuilder(
+                    padding: const EdgeInsets.all(10.0),
+                    crossAxisCount: 3,
+                    itemCount: productController.productList!.products!.length,
+                    itemBuilder: (context, index) => ImageCard(
+                      imageUrl: productController
+                          .productList!.products![index].thumbnail!,
+                    ),
+                    staggeredTileBuilder: (index) => StaggeredTile.count(
+                      (index % 7 == 0) ? 2 : 1,
+                      (index % 7 == 0) ? 2 : 1,
+                    ),
+                    mainAxisSpacing: 10.0,
+                    crossAxisSpacing: 10.0,
+                  );
+                }
+              }),
+            ),
           ],
         ),
       ),
