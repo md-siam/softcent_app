@@ -37,16 +37,7 @@ http: ^0.13.4                        // For http request
 
 ## Softcent App Demo
 
-<table align="center" style="margin: 0px auto;">
-  <tr>
-    <th>ExplorePage with popup dialog</th>
-    <!-- <th>Search Functionality</th> -->
-  </tr>
-  <tr>
-    <td><img align="right" src="screenshots/gifs/demo_1.gif" height="500"></img></td>
-    <!-- <td><img align="right" src="screenshots/gifs/darkMode.gif" height="500"></img></td> -->
-  </tr>
-  </table>
+<p align="center"><img src="screenshots/gifs/demo.gif"></p>
 
 ## File Pattern Inside The `'lib'` Folder
 
